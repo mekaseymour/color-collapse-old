@@ -1,3 +1,4 @@
 import Homescreen from './Homescreen';
+import Gamescreen from './Gamescreen';
 
-export { Homescreen };
+export { Homescreen, Gamescreen };
