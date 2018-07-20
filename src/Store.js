@@ -17,7 +17,4 @@ const Store = createStore(
   composeWithDevTools(middleware)
 );
 
-console.log('store', Store);
-// debugger;
-
 export default Store;

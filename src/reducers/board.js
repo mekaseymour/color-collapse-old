@@ -1,5 +1,4 @@
-import { GENERATE_BOARD } from '../utils/actionTypes';
-import { UPDATE_BOARD } from '../utils/actionTypes';
+import types from '../actionTypes';
 
 const initialState = {
   board: {
@@ -9,9 +8,9 @@ const initialState = {
 
 export default function(state = initialState, { type, payload }) {
   switch (type) {
-    case GENERATE_BOARD:
+    case types.GENERATE_BOARD:
       return payload;
-    case UPDATE_BOARD:
+    case types.UPDATE_BOARD:
       return Object.assign({}, state, {
         board: {
           pieces: [],

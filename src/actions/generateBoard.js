@@ -1,4 +1,4 @@
-import { GENERATE_BOARD } from '../utils/actionTypes';
+import types from '../actionTypes';
 
 import startingBoard from '../utils/startingBoard';
 
@@ -8,7 +8,7 @@ const generateBoard = props => dispatch => {
   navigate('Game');
 
   return dispatch({
-    type: GENERATE_BOARD,
+    type: types.GENERATE_BOARD,
     payload: startingBoard(),
   });
 };
