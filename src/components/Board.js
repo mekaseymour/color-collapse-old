@@ -1,21 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import BoardContainer from '../containers/BoardContainer.js';
-
-const Gamescreen = () => (
-  <View style={styles.container}>
+const Board = ({ board }) => {
+  <View style={styles.board}>
     <Text>This is the game screen.</Text>
-  </View>
-);
+    {board}
+  </View>;
+};
 
 const styles = StyleSheet.create({
-  container: {
+  board: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
 
-export default Gamescreen;
+export default Board;

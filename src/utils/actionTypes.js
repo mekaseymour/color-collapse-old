@@ -1,1 +1,2 @@
 export const UPDATE_BOARD = 'UPDATE_BOARD';
+export const GENERATE_BOARD = 'GENERATE_BOARD';

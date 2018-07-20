@@ -3,12 +3,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
 
-import { Homescreen, Gamescreen } from './src/components';
+import { Gamescreen } from './src/components';
+import { HomescreenContainer } from './src/containers';
 import Store from './src/Store.js';
 
 const RootStack = createStackNavigator(
   {
-    Home: Homescreen,
+    Home: HomescreenContainer,
     Game: Gamescreen,
   },
   {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-const Homescreen = ({ navigation }) => {
-  const { navigate } = navigation;
+const Homescreen = ({ navigation, onPress }) => {
+  // const { navigate } = navigation;
 
   return (
     <View style={styles.container}>
       <Text>This is the Home Screen</Text>
-      <Button onPress={() => navigate('Game')} title="PLAY" color="#1194f6" />
+      <Button onPress={onPress} title="PLAY" color="#1194f6" />
     </View>
   );
 };

@@ -1,3 +1,4 @@
+import { GENERATE_BOARD } from '../utils/actionTypes';
 import { UPDATE_BOARD } from '../utils/actionTypes';
 
 const initialState = {
@@ -6,8 +7,10 @@ const initialState = {
   },
 };
 
-export default function(state = initialState, action) {
-  switch (action.type) {
+export default function(state = initialState, { type, payload }) {
+  switch (type) {
+    case GENERATE_BOARD:
+      return payload;
     case UPDATE_BOARD:
       return Object.assign({}, state, {
         board: {
@@ -15,6 +18,7 @@ export default function(state = initialState, action) {
         },
       });
     default:
+      console.log('going to return default state');
       return state;
   }
 }
