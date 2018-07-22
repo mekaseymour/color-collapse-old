@@ -9,7 +9,7 @@ const generateBoard = props => dispatch => {
 
   return dispatch({
     type: types.GENERATE_BOARD,
-    payload: startingBoard(),
+    payload: { pieces: startingBoard(), height: 2, width: 2 },
   });
 };
 

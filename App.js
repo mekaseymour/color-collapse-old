@@ -17,6 +17,8 @@ const RootStack = createStackNavigator(
   }
 );
 
+console.log('store', Store);
+
 export default class App extends React.Component {
   render() {
     return (
