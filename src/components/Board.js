@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Piece from './Piece';
@@ -49,5 +50,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
+
+Board.propTypes = {
+  board: PropTypes.object.isRequired,
+};
 
 export default Board;
