@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-jest": "^23.4.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.4.1",
     "jest-expo": "~27.0.0",
+    "react-dom": "^16.4.1",
     "react-native-scripts": "1.14.0",
-    "react-test-renderer": "16.3.1"
+    "react-test-renderer": "^16.4.1"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -14,17 +20,23 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "jest",
-    "postinstall":
-      "remotedev-debugger—hostname localhost—port 5678—injectserver"
+    "postinstall": "remotedev-debugger -—hostname localhost -—port 5678 -—injectserver"
   },
   "remotedev": {
     "hostname": "localhost",
     "port": 5678
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|color-collapse|react-navigation|react-native-safe-area-view)/)"
+    ]
   },
   "dependencies": {
+    "enzyme": "^3.3.0",
     "expo": "^27.0.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
@@ -35,6 +47,7 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
-    "remote-redux-devtools": "^0.5.12"
+    "remote-redux-devtools": "^0.5.12",
+    "remotedev-rn-debugger": "^0.8.3"
   }
 }

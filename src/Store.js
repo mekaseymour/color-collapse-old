@@ -7,17 +7,20 @@ import logger from 'redux-logger';
 
 import RootReducer from './reducers';
 
-const INITIAL_STATE = { board: { pieces: [] } };
+const INITIAL_STATE = { board: { pieces: [], height: 0, width: 0 } };
 
 const middleware = applyMiddleware(promise, thunk, logger);
+const composeEnhancers = composeWithDevTools({ realtime: true, port: 5678 });
 
-const Store = createStore(
-  RootReducer,
-  INITIAL_STATE,
-  composeWithDevTools(middleware)
+const enhancer = compose(
+  middleware,
+  devTools({
+    name: Platform.OS,
+    hostname: 'localhost',
+    port: 5678,
+  })
 );
 
-console.log('store', Store);
-// debugger;
+const Store = createStore(RootReducer, INITIAL_STATE, enhancer);
 
 export default Store;

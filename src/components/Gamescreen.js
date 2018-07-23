@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import BoardContainer from '../containers/BoardContainer.js';
+import BoardContainer from '../containers/BoardContainer';
 
 const Gamescreen = () => (
   <View style={styles.container}>
-    <Text>This is the game screen.</Text>
+    <BoardContainer />
   </View>
 );
 
