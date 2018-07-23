@@ -17,11 +17,7 @@ export default function(state = initialState, { type, payload }) {
         width: payload.width,
       };
     case types.UPDATE_BOARD:
-      return Object.assign({}, state, {
-        board: {
-          pieces: [],
-        },
-      });
+      return payload;
     default:
       console.log('going to return default state');
       return state;
