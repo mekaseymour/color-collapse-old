@@ -1,5 +1,5 @@
 const startingBoard = () => {
-  return ['o', 'r', 'o', 'y'];
+  return ['g', 'r', 'o', 'y'];
 };
 
 export default startingBoard;

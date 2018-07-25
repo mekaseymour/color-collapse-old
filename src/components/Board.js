@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Piece from './Piece';
+// import { PieceContainer } from '../containers';
 
 const generatePiecesComponents = pieces => {
   return pieces.map((color, index) => {
-    return <Piece key={index} color={color} />;
+    return <Piece key={index} id={index} color={color} />;
   });
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-const Homescreen = ({ navigation, onPress }) => {
+const Homescreen = ({ onPress }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Color Collapse</Text>
